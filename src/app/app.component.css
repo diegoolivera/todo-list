@@ -1,0 +1,20 @@
+header{
+  background-color: rgb(71, 100, 114);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}

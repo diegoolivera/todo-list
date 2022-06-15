@@ -1,0 +1,44 @@
+<div>
+  <div class="contentForm">
+    <form>
+      <div class="contentHeader">
+        <input
+          [(ngModel)]="todoName"
+          [ngModelOptions]="{ standalone: true }"
+          class="inputTodo"
+          type="text"
+          placeholder="add Todo"
+          id="inputTudo"
+        />
+
+        <button class="btn pass" (click)="agregarTodo()">
+          <span class="material-symbols-outlined"> add </span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <ul class="contentList">
+    <div class="contentMensajeAnimado" *ngIf="tudos.length == 0">
+      <p class="mensajeAnimado">Add Todo...</p>
+    </div>
+
+    <li *ngFor="let t of tudos; let i = index">
+      <p class="{{ t.completo ? 'complete' : 'null' }}">{{ t.nombre }}</p>
+      <div class="contentActions">
+        <input
+          id="inputTodo"
+          class="check"
+          (click)="check(i)"
+          type="checkbox"
+        />
+        <span
+          (click)="deleteTodo(i)"
+          class="material-symbols-outlined btnDanger"
+        >
+          delete
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
